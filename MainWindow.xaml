@@ -39,7 +39,7 @@
                          Height="400"
                          Background="{StaticResource GridBackgroundColor}"
                          SnapsToDevicePixels="True"
-                         RenderOptions.BitmapScalingMode="HighQuality"
+                         
                          >
             </UniformGrid>
             
