@@ -15,7 +15,7 @@ namespace Snake
 
         private static ImageSource LoadImage(string filename)
         {
-            return new BitmapImage(new Uri($"C:\\Users\\diogo\\source\\repos\\Snake\\Assets\\{filename}", UriKind.Relative));
+            return new BitmapImage(new Uri($"C:\\Users\\diogo\\source\\repos\\Snake\\Assets\\{filename}", UriKind.Absolute));
         }
     }
 }

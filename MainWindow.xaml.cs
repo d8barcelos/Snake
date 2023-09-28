@@ -84,7 +84,7 @@ namespace Snake
             GameGrid.Rows = rows;
             GameGrid.Columns = cols;
 
-            for (int r = 0; r < cols; r++)
+            for (int r = 0; r < rows; r++)
             {
                 for (int c = 0; c < cols; c++)
                 {
@@ -104,6 +104,7 @@ namespace Snake
         private void Draw()
         {
             DrawGrid();
+            ScoreText.Text = $"SCORE {gameState.Score}";
         }
 
         private void DrawGrid()
