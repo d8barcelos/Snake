@@ -16,7 +16,7 @@ Este é um simples jogo Snake (Cobra) implementado em C# usando a biblioteca WPF
 
 ## Capturas de Tela
 
-![Captura de Tela 1](Screenshots/snakeprint22.PNG)
+![Captura de Tela 1](Screenshots/snakeprint22.png)
 ![Captura de Tela 2](Screenshots/deadsnake.PNG)
 
 ## Como Jogar
