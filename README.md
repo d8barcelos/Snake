@@ -1,6 +1,6 @@
 # Snake Game in C# (WPF)
 
-![Snake Game](link_para_uma_imagem_do_jogo)
+![Snake Game](https://ibb.co/PQvQ6DN)
 
 ## Descrição do Projeto
 
@@ -28,16 +28,7 @@ Este é um simples jogo Snake (Cobra) implementado em C# usando a biblioteca WPF
 5. Tente comer o máximo de comida possível e evite colidir com as paredes ou com o próprio corpo da cobra.
 6. Quando o jogo terminar, pressione qualquer tecla para reiniciá-lo.
 
-## Requisitos do Sistema
-
-- Windows OS
-- Visual Studio ou outra IDE compatível com C#
-- .NET Framework
-
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar solicitações de pull (pull requests) para melhorar este projeto.
 
-## Licença
-
-Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
