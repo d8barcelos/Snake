@@ -24,6 +24,14 @@ namespace Snake
             { GridValue.Food, Images.Food }
         };
 
+        private readonly Dictionary<Direction, int> dirToRotation = new()
+            {
+                { Direction.Left, 270 },
+                { Direction.Right, 90 },
+                { Direction.Up, 0 },
+                { Direction.Down, 180 },
+            };
+
         private readonly int rows = 15, cols = 15;
         private readonly Image[,] gridImages;
         private GameState gameState;
@@ -42,6 +50,8 @@ namespace Snake
             await ShowCountdown();
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
+            await ShowGameOver();
+            gameState = new GameState(rows, cols);
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -108,7 +118,8 @@ namespace Snake
                 {
                     Image image = new Image
                     {
-                        Source = Images.Empty
+                        Source = Images.Empty,
+                        RenderTransformOrigin = new Point(0.5, 0.5)
                     };
 
                     images[r, c] = image;
@@ -122,6 +133,7 @@ namespace Snake
         private void Draw()
         {
             DrawGrid();
+            DrawSnakeHead();
             ScoreText.Text = $"SCORE {gameState.Score}";
         }
 
@@ -133,8 +145,20 @@ namespace Snake
                 {
                     GridValue gridVal = gameState.Grid[r, c];
                     gridImages[r, c].Source = gridValToImage[gridVal];
+                    gridImages[r, c].RenderTransform = Transform.Identity;
                 }
             }
+        }
+
+        private void DrawSnakeHead()
+        {
+            Position headPos = gameState.HeadPosition();
+            Image image = gridImages[headPos.Row, headPos.Col];
+            image.Source = Images.Head;
+
+            int rotation = dirToRotation[gameState.Dir];
+            image.RenderTransform = new RotateTransform(rotation);
+
         }
 
         public async Task ShowCountdown()
@@ -144,6 +168,13 @@ namespace Snake
                 OverlayText.Text = i.ToString();
                 await Task.Delay(500);
             }
+        }
+
+        private async Task ShowGameOver()
+        {
+            await Task.Delay(1000);
+            Overlay.Visibility = Visibility.Visible;
+            OverlayText.Text = "PRESS ANY KEY TO START";
         }
     }
 }
