@@ -1,6 +1,6 @@
 # Snake Game in C# (WPF)
 
-![Snake Game](https://ibb.co/PQvQ6DN)
+![Snake Game](Screenshots/snakeprint1.PNG)
 
 ## Descrição do Projeto
 
@@ -16,8 +16,8 @@ Este é um simples jogo Snake (Cobra) implementado em C# usando a biblioteca WPF
 
 ## Capturas de Tela
 
-![Captura de Tela 1](link_para_uma_captura_de_tela_1)
-![Captura de Tela 2](link_para_uma_captura_de_tela_2)
+![Captura de Tela 1](Screenshots/snakeprint22.PNG)
+![Captura de Tela 2](Screenshots/deadsnake.PNG)
 
 ## Como Jogar
 
