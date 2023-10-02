@@ -32,7 +32,7 @@ namespace Snake
                 { Direction.Down, 180 },
             };
 
-        private readonly int rows = 20, cols = 20;
+        private readonly int rows = 18, cols = 18;
         private readonly Image[,] gridImages;
         private GameState gameState;
         private bool gameRunning;
